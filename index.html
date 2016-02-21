@@ -1,0 +1,62 @@
+<!doctype html>
+<html ng-app="todoApp">
+  <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="todo.js"></script>
+  </head>
+  <body ng-controller="TodoListController as todoList">
+    
+    <div class="container">
+      <h1 align="center">Market</h1>
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active food" ng-click="todoList.showfood()"><a href="#">Food</a></li>
+          <li role="presentation" class="drink" ng-click="todoList.showdrink()"><a href="#">Drink</a></li>
+        </ul>
+      <div class="row">
+        <div ng-show="todoList.food">
+          <div class="col-md-3">
+          <button style="width:200px"class="btn btn-warning 1" ng-click="todoList.addFood(65)">พิซซ่าโฮลวีทอกไก่ 65</button><br>
+          <button style="width:200px"class="btn btn-warning 2" ng-click="todoList.addFood(40)">โทสไข่ไส้กรอก 40</button><br>
+          <button style="width:200px"class="btn btn-warning 3" ng-click="todoList.addFood(40)">ซุปไก่ 40</button><br>
+          <button style="width:200px"class="btn btn-warning 4" ng-click="todoList.addFood(40)">ไข่กระทะ 40</button><br>
+          <button style="width:200px"class="btn btn-warning 5" ng-click="todoList.addFood(70)">สปาเก็ตตี้ 70</button><br>
+          <button style="width:200px"class="btn btn-warning 6" ng-click="todoList.addFood(40)">ข้าวหน้าไก่ 40</button><br>
+          <button style="width:200px"class="btn btn-warning 7" ng-click="todoList.addFood(30)">ข้าวผัด 30</button><br>
+          <button style="width:200px"class="btn btn-warning 8" ng-click="todoList.addFood(55)">โซบะอกไก่ 55</button><br>
+          <button style="width:200px"class="btn btn-warning 9" ng-click="todoList.addFood(90)">สเต็กไก่อบ ปลาอบ 90</button><br>
+          <button style="width:200px"class="btn btn-warning 10" ng-click="todoList.addFood(40)">สุกี้เส้นบุก 40</button><br>
+          </div>
+          <div class="col-md-3">
+          <button style="width:300px"class="btn btn-warning 11" ng-click="todoList.addFood(50)">สลัดผักน้ำใส 50</button><br>
+          <button style="width:300px"class="btn btn-warning 12" ng-click="todoList.addFood(50)">ยำทูน่า 50</button><br>
+          <button style="width:300px"class="btn btn-warning 13" ng-click="todoList.addFood(40)">ต้มจืดวุ้นเส้น 40</button><br>
+          <button style="width:300px"class="btn btn-warning 14" ng-click="todoList.addFood(35)">ยำวุ้นเส้น 35</button><br>
+          <button style="width:300px"class="btn btn-warning 15" ng-click="todoList.addFood(35)">ส้มตำ น้ำตก 35</button><br>
+          <button style="width:300px"class="btn btn-warning 16" ng-click="todoList.addFood(60)">เกาเหลาปลา 60</button><br>
+          <button style="width:300px"class="btn btn-warning 17" ng-click="todoList.addFood(70)">ไก่ม้วนแตงกวาและแครอท 70</button><br>
+          <button style="width:300px"class="btn btn-warning 18" ng-click="todoList.addFood(70)">ขนมปังโฮลวีตปิ้งหน้าเผือกบดกับผลไม้สด 70</button><br>
+          <button style="width:300px"class="btn btn-warning 19" ng-click="todoList.addFood(50)">ซูชิอกไก่ 50</button><br>
+          <button style="width:300px"class="btn btn-warning 20" ng-click="todoList.addFood(60)">สลัดทูน่ากับขนมปังโฮลวีตไข่ดาว 60</button><br>
+          </div>
+        </div>
+        <div ng-show="todoList.drink">
+          <button style="width:200px"class="btn btn-info 21"ng-click="todoList.addDrink(20)">Drinking Water 20</button><br>
+          <button style="width:200px"class="btn btn-info 22"ng-click="todoList.addDrink(60)">CoCa CoLa  60</button><br>
+          <button style="width:200px"class="btn btn-info 23"ng-click="todoList.addDrink(70)">Loe  70</button><br>
+          <button style="width:200px"class="btn btn-info 24"ng-click="todoList.addDrink(80)">Death in the Afternoon 80</button><br>
+          <button style="width:200px"class="btn btn-info"ng-click="todoList.addDrink(80)">Earthquake 80</button><br>
+        </div>
+      </div>
+
+      <h1>ราคารวมทั้งหมด : {{todoList.sum}} ฿</h1>
+      
+    </div>
+  </body>
+</html>
