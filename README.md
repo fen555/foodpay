@@ -7,6 +7,10 @@ git clone https://github.com/fen555/foodpay.git
 http-server -p 8888
 ```
 ### How to test?
+##### test 3 times 
+###### 1. less 100 bath
+###### 2. more than 100 bath but less than 200 bath
+###### 3. more than 200 bath
 ```
 node node.js
 ```
